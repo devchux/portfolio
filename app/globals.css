@@ -89,9 +89,33 @@ h3,
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: -0.55rem;
+  block-size: 1px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+}
+
 .nav-link:hover,
+.nav-link:focus-visible,
+.nav-link[aria-current="page"],
 .mobile-nav-link:hover {
   opacity: 1;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 .mobile-nav-link:hover {
