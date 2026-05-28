@@ -8,7 +8,6 @@ type ContactLink = {
 
 const contactLinks: ContactLink[] = [
   { label: "chukwudieze97@gmail.com", href: "mailto:chukwudieze97@gmail.com" },
-  { label: "+234 9035122388", href: "tel:+2349035122388" },
   { label: "GitHub", href: "https://github.com/devchux" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/chukwudi-eze-21994a1a3/" },
   { label: "Twitter (X)", href: "https://x.com/devchux" },
