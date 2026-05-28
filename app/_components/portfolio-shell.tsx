@@ -11,10 +11,10 @@ export function PortfolioShell({ children }: { children: ReactNode }) {
         <MotionMount as="header" className="flex min-h-12 items-start justify-between lg:hidden">
           <div aria-hidden="true" className="hidden lg:block" />
           <div>
-            <p className="font-heading text-[18px] font-semibold leading-5 text-foreground">
+            <p className="font-heading text-2xl font-semibold text-foreground">
               Chukwudi Eze,
             </p>
-            <h1 className="text-[17px] font-normal leading-5 tracking-[-0.01em] text-muted">
+            <h1 className="text-lg font-normal leading-5 tracking-[-0.01em] text-muted">
               Software Engineer
             </h1>
           </div>

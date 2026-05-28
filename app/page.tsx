@@ -42,6 +42,10 @@ export default function Home() {
           </div>
         </Section>
 
+        <Section title="Projects" className="scroll-mt-10" id="projects">
+          <ProjectList projects={projects} />
+        </Section>
+
         <Section title="Skills">
           <div className="grid grid-cols-2 gap-8 md:gap-x-14 md:gap-y-12">
             {skillGroups.map((group) => (
@@ -52,10 +56,6 @@ export default function Home() {
 
         <Section title="Education">
           <EducationList education={education} />
-        </Section>
-
-        <Section title="Projects" className="scroll-mt-10" id="projects">
-          <ProjectList projects={projects} />
         </Section>
 
         <ContactSection>

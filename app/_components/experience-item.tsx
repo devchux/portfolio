@@ -6,7 +6,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
     <MotionItem as="article" className="grid gap-5 border-t border-rule py-7 first:border-t-0 first:pt-0 md:grid-cols-[240px_1fr] md:gap-12">
       <div>
-        <h3 className="text-[15px] font-semibold leading-5 text-foreground lg:leading-snug">{experience.role}</h3>
+        <h3 className="text-lg font-semibold leading-5 text-foreground lg:leading-snug">{experience.role}</h3>
         <p className="mt-3 text-[14px] leading-6 text-muted lg:mt-4 lg:text-[15px]">
           {experience.href ? <ExternalLink href={experience.href}>{experience.company}</ExternalLink> : experience.company}
           <br />

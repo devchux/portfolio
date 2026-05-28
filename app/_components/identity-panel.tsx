@@ -40,7 +40,7 @@ export function IdentityPanel() {
           </p>
         </div>
 
-        <div className="mt-10 grid max-w-82.5 gap-3 text-xs leading-5 lg:mt-auto">
+        <div className="mt-10 grid max-w-82.5 gap-3 text-sm lg:mt-auto">
           {contactLinks.map((link) => (
             <ExternalLink href={link.href} key={link.href}>
               {link.label}
