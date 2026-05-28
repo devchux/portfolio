@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Chukwudi Eze",
-  title: "Chukwudi Eze - Software Engineer",
+  title: "Chukwudi Eze - Full-Stack Software Engineer",
   description:
-    "Full-stack software engineer building scalable digital platforms, enterprise systems, and AI-powered workflows with React, Next.js, TypeScript, NestJS, PostgreSQL, and cloud-native infrastructure.",
-  url: "https://chux.netlify.app",
+    "Chukwudi Eze is a full-stack software engineer in Lagos building scalable digital platforms, enterprise systems, and AI-powered workflows with React, Next.js, TypeScript, NestJS, PostgreSQL, and cloud-native infrastructure.",
+  url: "https://www.chukwudieze.com",
   email: "chukwudieze97@gmail.com",
   locale: "en_US",
   location: "Lagos, Nigeria",
@@ -14,6 +14,7 @@ export const siteConfig = {
   keywords: [
     "Chukwudi Eze",
     "Software Engineer",
+    "Full-Stack Software Engineer",
     "AI Engineer",
     "RAG Engineer",
     "Full-stack Engineer",

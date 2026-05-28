@@ -24,7 +24,7 @@
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
   --color-rule: var(--rule);
-  --font-sans: var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-figtree), Inter, Arial, Helvetica, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -40,7 +40,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+  font-family: var(--font-figtree), Inter, Arial, Helvetica, sans-serif;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
@@ -67,7 +67,7 @@ h2,
 h3,
 .section-label,
 .font-heading {
-  font-family: var(--font-addington), var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+  font-family: var(--font-addington), var(--font-figtree), Inter, Arial, Helvetica, sans-serif;
 }
 
 .animated-underline {
@@ -90,23 +90,8 @@ h3,
 }
 
 .nav-link:hover,
-.mobile-nav-link:hover,
-.nav-link[aria-current="page"],
-.mobile-nav-link[aria-current="page"] {
+.mobile-nav-link:hover {
   opacity: 1;
-}
-
-.nav-link[aria-current="page"] {
-  position: relative;
-}
-
-.nav-link[aria-current="page"]::after {
-  position: absolute;
-  inset-inline: 0;
-  inset-block-end: -0.55rem;
-  block-size: 1px;
-  background: currentColor;
-  content: "";
 }
 
 .mobile-nav-link:hover {

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { DesktopNav, MobileNav } from "./site-nav";
+import { MobileNav } from "./mobile-nav";
+import { DesktopNav } from "./site-nav";
 
 type ContactLink = {
   label: string;

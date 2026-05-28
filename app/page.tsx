@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { ExternalLink, PortfolioShell } from "./_components/profile-layout";
-import { absoluteUrl, siteConfig } from "./seo";
+import { absoluteUrl } from "./seo";
 
 export const metadata: Metadata = {
-  title: "Software Engineer",
+  title: "Chukwudi Eze - Full-Stack Software Engineer",
   description:
-    "Portfolio and resume for Chukwudi Eze, a software engineer building scalable customer intelligence platforms, fintech products, enterprise systems, and AI-powered workflows.",
+    "Chukwudi Eze is a full-stack software engineer in Lagos building scalable customer intelligence platforms, fintech products, enterprise systems, and AI-powered workflows with React, Next.js, TypeScript, NestJS, and PostgreSQL.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     url: absoluteUrl("/"),
-    title: siteConfig.title,
+    title: "Chukwudi Eze - Full-Stack Software Engineer",
     description:
-      "Explore the engineering work, experience, skills, education, and projects of Chukwudi Eze.",
+      "Explore the full-stack software engineering experience, React and Next.js projects, TypeScript skills, and AI engineering work of Chukwudi Eze.",
   },
   twitter: {
-    title: siteConfig.title,
+    title: "Chukwudi Eze - Full-Stack Software Engineer",
     description:
-      "Explore the engineering work, experience, skills, education, and projects of Chukwudi Eze.",
+      "Explore the full-stack software engineering experience, React and Next.js projects, TypeScript skills, and AI engineering work of Chukwudi Eze.",
   },
 };
 
@@ -161,7 +161,7 @@ const projects: Project[] = [
   },
   {
     name: "Previous Portfolio",
-    href: "https://chux.netlify.app/",
+    href: "https://www.chukwudieze.com/",
     summary: "Personal portfolio showcasing earlier frontend work, interaction experiments, and selected web projects.",
   },
   {
@@ -301,7 +301,7 @@ export default function Home() {
                 Contact me
               </h2>
               <p className="mt-4 max-w-150 text-[15px] leading-7 text-muted lg:mt-5 lg:text-[17px] lg:leading-8">
-                I am interested in product engineering roles where speed, craft, and thoughtful systems matter.
+                I am interested in full-stack software engineering roles where speed, craft, and thoughtful systems matter.
               </p>
               <div className="mt-8 text-[15px]">
                 <ExternalLink href="mailto:chukwudieze97@gmail.com">Start a conversation</ExternalLink>

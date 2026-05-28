@@ -3,9 +3,9 @@ import { ExternalLink, PortfolioShell } from "../_components/profile-layout";
 import { absoluteUrl, siteConfig } from "../seo";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About - Chukwudi Eze, Software Engineer",
   description:
-    "Learn about Chukwudi Eze, a software engineer focused on scalable enterprise platforms, customer experience systems, and AI-powered knowledge workflows.",
+    "Learn about Chukwudi Eze, a full-stack software engineer in Lagos focused on scalable enterprise platforms, customer experience systems and AI-powered knowledge workflows.",
   alternates: {
     canonical: "/about",
   },

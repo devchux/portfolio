@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Zen_Kaku_Gothic_New } from "next/font/google";
+import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { absoluteUrl, siteConfig } from "./seo";
@@ -7,28 +7,13 @@ import { absoluteUrl, siteConfig } from "./seo";
 const addington = localFont({
   src: [
     {
-      path: "../public/font/Addington.CF/AddingtonCF-Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
       path: "../public/font/Addington.CF/AddingtonCF-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/font/Addington.CF/AddingtonCF-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
       path: "../public/font/Addington.CF/AddingtonCF-DemiBold.otf",
       weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/font/Addington.CF/AddingtonCF-Bold.otf",
-      weight: "700",
       style: "normal",
     },
   ],
@@ -40,14 +25,7 @@ const figtree = Figtree({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-figtree",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-});
-
-const zenKaku = Zen_Kaku_Gothic_New({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-zen-kaku",
-  weight: ["300", "400", "500", "700", "900"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {
@@ -134,7 +112,7 @@ export default function RootLayout({
     name: siteConfig.name,
     url: siteConfig.url,
     email: `mailto:${siteConfig.email}`,
-    jobTitle: "Software Engineer",
+    jobTitle: "Full-Stack Software Engineer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lagos",
@@ -159,7 +137,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${addington.variable} ${figtree.variable} ${zenKaku.variable} h-full antialiased`}
+      className={`${addington.variable} ${figtree.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
