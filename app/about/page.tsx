@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { ExternalLink, PortfolioShell } from "../_components/profile-layout";
+import { ContactSection } from "../_components/contact-section";
+import { MotionItem, MotionPage, MotionSection } from "../_components/motion-primitives";
+import { PortfolioShell } from "../_components/portfolio-shell";
 import { absoluteUrl, siteConfig } from "../seo";
 
 export const metadata: Metadata = {
@@ -34,31 +36,23 @@ const aboutParagraphs = [
 export default function AboutPage() {
   return (
     <PortfolioShell>
-      <div className="mt-8 lg:mt-37">
-        <section className="section-rule grid gap-7 pb-20 md:grid-cols-[160px_1fr] md:gap-12 lg:pb-28">
+      <MotionPage className="mt-8 lg:mt-37">
+        <MotionSection className="section-rule grid gap-7 pb-20 md:grid-cols-[160px_1fr] md:gap-12 lg:pb-28">
           <h2 className="section-label">About Me</h2>
 
           <div className="max-w-115 leading-7 tracking-[-0.01em] text-foreground">
             {aboutParagraphs.map((paragraph) => (
-              <p className="mb-6 last:mb-0 lg:mb-10" key={paragraph}>
+              <MotionItem as="p" className="mb-6 last:mb-0 lg:mb-10" key={paragraph}>
                 {paragraph}
-              </p>
+              </MotionItem>
             ))}
           </div>
-        </section>
+        </MotionSection>
 
-        <section className="section-rule mt-28 scroll-mt-10 pb-16 lg:mt-52 lg:pb-24" id="contact">
-          <h2 className="max-w-155 text-[26px] font-semibold leading-tight tracking-[-0.01em] text-foreground lg:text-[42px]">
-            Contact me
-          </h2>
-          <p className="mt-4 max-w-150 text-[15px] leading-7 text-muted lg:mt-5 lg:text-[17px] lg:leading-8">
-            Open to product engineering roles, senior frontend work, and full-stack systems where execution quality matters.
-          </p>
-          <div className="mt-8 text-[15px]">
-            <ExternalLink href="mailto:chukwudieze97@gmail.com">Start a conversation</ExternalLink>
-          </div>
-        </section>
-      </div>
+        <ContactSection className="section-rule mt-28 scroll-mt-10 pb-16 lg:mt-52 lg:pb-24">
+          Open to product engineering roles, senior frontend work, and full-stack systems where execution quality matters.
+        </ContactSection>
+      </MotionPage>
     </PortfolioShell>
   );
 }
