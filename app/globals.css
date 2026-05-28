@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f5f5f5;
+  --muted: #d4d4d4;
+  --subtle: #737373;
+  --rule: color-mix(in oklab, white 18%, transparent);
+  --rule-strong: color-mix(in oklab, white 26%, transparent);
+}
+
+:root[data-theme="light"] {
+  --background: #f7f5ef;
+  --foreground: #111111;
+  --muted: #4f4f4f;
+  --subtle: #74716a;
+  --rule: color-mix(in oklab, black 16%, transparent);
+  --rule-strong: color-mix(in oklab, black 24%, transparent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-rule: var(--rule);
+  --font-sans: var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.section-rule {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.65rem;
+}
+
+.section-label {
+  margin-bottom: 1.5rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3,
+.section-label,
+.font-heading {
+  font-family: var(--font-addington), var(--font-figtree), var(--font-zen-kaku), Inter, Arial, Helvetica, sans-serif;
+}
+
+.animated-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 180ms ease, color 180ms ease;
+}
+
+.animated-underline:hover {
+  background-size: 100% 1px;
+  color: var(--foreground);
+}
+
+.nav-link,
+.mobile-nav-link {
+  opacity: 0.62;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.nav-link:hover,
+.mobile-nav-link:hover,
+.nav-link[aria-current="page"],
+.mobile-nav-link[aria-current="page"] {
+  opacity: 1;
+}
+
+.nav-link[aria-current="page"] {
+  position: relative;
+}
+
+.nav-link[aria-current="page"]::after {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: -0.55rem;
+  block-size: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.mobile-nav-link:hover {
+  transform: translateX(-0.15rem);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 3rem;
+  block-size: 1.75rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--foreground) 8%, transparent);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--foreground);
+}
+
+.theme-toggle__track {
+  position: relative;
+  inline-size: 2.1rem;
+  block-size: 1rem;
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 1rem;
+  block-size: 1rem;
+  border-radius: 999px;
+  background: var(--foreground);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--background) 18%, transparent);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+:root[data-theme="light"] .theme-toggle__thumb {
+  transform: translateX(1.1rem);
+}
+
+@media (min-width: 1024px) {
+  .section-label {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section-rule {
+    padding-top: 1.5rem;
+  }
+
+  .theme-toggle {
+    inline-size: 2.15rem;
+    block-size: 1.25rem;
+    border-radius: 999px;
+  }
+
+  .theme-toggle__track {
+    inline-size: 1.45rem;
+    block-size: 0.7rem;
+  }
+
+  .theme-toggle__thumb {
+    inline-size: 0.7rem;
+    block-size: 0.7rem;
+  }
+
+  :root[data-theme="light"] .theme-toggle__thumb {
+    transform: translateX(0.75rem);
+  }
+}
