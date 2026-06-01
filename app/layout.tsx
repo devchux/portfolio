@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
-import localFont from "next/font/local";
+import { Cormorant, Figtree } from "next/font/google";
 import "./globals.css";
 import { absoluteUrl, siteConfig } from "./seo";
 
-const addington = localFont({
-  src: [
-    {
-      path: "../public/font/Addington.CF/AddingtonCF-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/font/Addington.CF/AddingtonCF-DemiBold.otf",
-      weight: "600",
-      style: "normal",
-    },
-  ],
+const cormorant = Cormorant({
+  subsets: ["latin"],
   display: "swap",
-  variable: "--font-addington",
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const figtree = Figtree({
@@ -137,7 +127,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${addington.variable} ${figtree.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${figtree.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

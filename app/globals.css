@@ -67,7 +67,7 @@ h2,
 h3,
 .section-label,
 .font-heading {
-  font-family: var(--font-addington), var(--font-figtree), Inter, Arial, Helvetica, sans-serif;
+  font-family: var(--font-cormorant), var(--font-figtree), Inter, Arial, Helvetica, sans-serif;
 }
 
 .animated-underline {
