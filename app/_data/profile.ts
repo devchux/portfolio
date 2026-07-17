@@ -120,6 +120,11 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
+    name: "Megowa",
+    href: "https://megowa.com/",
+    summary: "Connects Nollywood talents with opportunities, resources, training, and industry stories across African film.",
+  },
+  {
     name: "Schoolmates",
     href: "https://newfountainportal.schoolmateglobal.com/auth",
     summary: "End-to-end school management system with role-based access and reporting tools.",
@@ -127,17 +132,17 @@ export const projects: Project[] = [
   {
     name: "Viou Digital",
     href: "https://vioudigital.com",
-    summary: "Interactive digital studio website with GSAP-powered motion and a polished content-driven experience.",
+    summary: "Connects clients with world-class visuals and storytellers, enhanced by AI-driven creative workflows.",
   },
   {
     name: "React Formid",
     href: "https://www.npmjs.com/package/react-formid",
-    summary: "Lightweight schema-based form validation library for React.",
+    summary: "Minimal React hook for flexible form validations inspired by React Hook Form.",
   },
   {
     name: "Previous Portfolio",
-    href: "https://www.chukwudieze.com/",
-    summary: "Personal portfolio showcasing earlier frontend work, interaction experiments, and selected web projects.",
+    href: "https://www.chux.netlify.app/",
+    summary: "Portfolio for full-stack engineering work across customer intelligence, fintech, enterprise systems, and AI workflows.",
   },
   {
     name: "PS4",
