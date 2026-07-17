@@ -125,6 +125,11 @@ export const projects: Project[] = [
     summary: "Connects Nollywood talents with opportunities, resources, training, and industry stories across African film.",
   },
   {
+    name: "Garnet Big Data",
+    href: "https://www.garnetbigdata.com/",
+    summary: "Helps enterprises unlock data potential through strategy, culture transformation, training, and analytics solutions.",
+  },
+  {
     name: "Schoolmates",
     href: "https://newfountainportal.schoolmateglobal.com/auth",
     summary: "End-to-end school management system with role-based access and reporting tools.",
